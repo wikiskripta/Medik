@@ -102,11 +102,11 @@ aside {
 }
 
 aside .dropdown,
-#p-namespaces span {
+#p-associated-pages span {
 	padding-right: 1em;
 }
 
-#p-namespaces .mw-portlet-body > div {
+#p-associated-pages .mw-portlet-body > div {
 	display: flex;
 	flex-wrap: wrap;
 }

@@ -185,8 +185,8 @@ class MedikTemplate extends BaseTemplate {
 			'div',
 			[ 'class' => 'd-flex flex-row flex-wrap' ],
 			$this->getPortlet(
-				'namespaces',
-				$this->data['content_navigation']['namespaces'],
+				'associated-pages',
+				$this->data['content_navigation']['associated-pages'],
 				null,
 				[ 'portlet-list-tag' => 'div', 'list-item' => [ 'tag' => 'span' ] ]
 			) .
@@ -341,11 +341,29 @@ class MedikTemplate extends BaseTemplate {
 	}
 
 	/**
+	 * Backwards compatibility method to get personal tools the "classic way" that doesn't trigger
+	 * deprecation warnings (T422975).
+	 *
+	 * @return array
+	 */
+	private function getPersonalToolsClassic() {
+		$cNav = $this->get( 'content_navigation' );
+		$personalTools = array_merge(
+			$cNav['user-interface-preferences'],
+			$cNav['user-page'],
+			$cNav['notifications'],
+			$cNav['user-menu']
+		);
+
+		return $this->getSkin()->getPersonalToolsForMakeListItem( $personalTools );
+	}
+
+	/**
 	 * Generates user tools menu
 	 * @return string html
 	 */
 	protected function getUserLinks() {
-		$personaltools = $this->getPersonalTools();
+		$personaltools = $this->getPersonalToolsClassic();
 		// Remove Echo icons from the personal menu
 		$echoicons = [];
 		if ( isset( $personaltools[ 'notifications-alert' ] ) ) {

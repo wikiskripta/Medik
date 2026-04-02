@@ -207,15 +207,15 @@ aside a:not( .disabled ) {
 	color: #000;
 }
 
-#p-namespaces .selected a {
+#p-associated-pages .selected a {
 	border-bottom: 3px solid var( --medik );
 }
 
-#p-namespaces .selected a:hover {
+#p-associated-pages .selected a:hover {
 	text-decoration: none;
 }
 
-#p-namespaces-label {
+#p-associated-pages-label {
 	display: none;
 }
 
