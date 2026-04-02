@@ -4,6 +4,8 @@ Skin Medik for MediaWiki
 This is a MediaWiki skin based on Bootstrap library, originally
 created for WikiSkripta.
 
+1.39 <= MW < 1.45
+
 For documentation on how to install, configure and use this skin
 please refer to:
 
