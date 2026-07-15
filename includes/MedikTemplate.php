@@ -278,7 +278,6 @@ class MedikTemplate extends BaseTemplate {
 		$sidebar = $this->getSidebar();
 		$sidebar['SEARCH'] = false;
 		$sidebar['TOOLBOX'] = false;
-		$sidebar['LANGUAGES'] = false;
 
 		foreach ( $sidebar as $name => $content ) {
 			if ( $content === false ) {
@@ -299,7 +298,12 @@ class MedikTemplate extends BaseTemplate {
 					);
 					break;
 				case 'LANGUAGES':
-					$html .= null;
+					$html .= $this->getPortlet(
+						'lang',
+						$content['content'],
+						'otherlanguages',
+						[ 'add-class' => 'nav-link' ]
+					);
 					break;
 				default:
 					$html .= $this->getPortlet(

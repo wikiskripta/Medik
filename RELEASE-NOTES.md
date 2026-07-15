@@ -10,6 +10,12 @@ Under development.
 * Added CSS fallbacks for removed SkinModule features
 * Used fully qualified class names and modern method calls
 
+### Medik 5.1.5
+
+Released on July 16, 2026.
+
+* Fixed interlanguage links not being shown in the sidebar
+
 ### Medik 5.1.4
 
 Released on April 2, 2026.
