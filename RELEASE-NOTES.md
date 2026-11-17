@@ -9,6 +9,7 @@ Under development.
 * Removed deprecated SkinModule features (interface-message-box, i18n-all-lists-margins)
 * Added CSS fallbacks for removed SkinModule features
 * Used fully qualified class names and modern method calls
+* Fixed VisualEditor toolbar not staying at the top when scrolling on MW 1.46+
 
 ### Medik 5.1.5
 

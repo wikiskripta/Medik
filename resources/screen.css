@@ -240,6 +240,15 @@ aside a:not( .disabled ) {
 	padding: 1em 0 2em 0;
 }
 
+/* keep the VisualEditor toolbar sticky on MW 1.46+ */
+.ve-activated #content {
+	overflow: visible;
+}
+
+.ve-activated #bodyContent {
+	overflow: auto;
+}
+
 .mw-body-content {
 	line-height: 1.5em;
 }
