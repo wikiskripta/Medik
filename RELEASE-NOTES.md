@@ -5,7 +5,7 @@
 Under development.
 
 * Raised minimum MediaWiki version from 1.39 to 1.43
-* Updated Bootstrap to 5.3.8
+* Updated Bootstrap to 5.3.9
 * Removed deprecated SkinModule features (interface-message-box, i18n-all-lists-margins)
 * Added CSS fallbacks for removed SkinModule features
 * Used fully qualified class names and modern method calls
