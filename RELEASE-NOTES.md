@@ -10,6 +10,7 @@ Under development.
 * Added CSS fallbacks for removed SkinModule features
 * Used fully qualified class names and modern method calls
 * Fixed VisualEditor toolbar not staying at the top when scrolling on MW 1.46+
+* Fixed deprecation warnings about skin menus and personal tools on MW 1.46+
 
 ### Medik 5.1.5
 

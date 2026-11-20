@@ -179,15 +179,20 @@ class MedikTemplate extends BaseTemplate {
 	 * @return string html
 	 */
 	protected function getAside() {
+		// MediaWiki 1.46+ provides `associated-pages`; 1.43 to 1.45 provide `namespaces`
+		$associatedPagesMenu = isset( $this->data['content_navigation']['associated-pages'] ) ?
+			'associated-pages' :
+			'namespaces';
+
 		$html = $this->htmlClass::openElement( 'aside' );
 
 		$html .= $this->htmlClass::rawElement(
 			'div',
 			[ 'class' => 'd-flex flex-row flex-wrap' ],
 			$this->getPortlet(
+				$associatedPagesMenu,
+				$this->data['content_navigation'][$associatedPagesMenu],
 				'namespaces',
-				$this->data['content_navigation']['namespaces'],
-				null,
 				[ 'portlet-list-tag' => 'div', 'list-item' => [ 'tag' => 'span' ] ]
 			) .
 			$this->htmlClass::rawElement( 'div', [ 'class' => 'dropdown' ],
@@ -349,7 +354,7 @@ class MedikTemplate extends BaseTemplate {
 	 * @return string html
 	 */
 	protected function getUserLinks() {
-		$personaltools = $this->getPersonalTools();
+		$personaltools = $this->getSkin()->getPersonalToolsForMakeListItem( $this->getPersonalUrls() );
 		// Remove Echo icons from the personal menu
 		$echoicons = [];
 		if ( isset( $personaltools[ 'notifications-alert' ] ) ) {
@@ -430,6 +435,21 @@ class MedikTemplate extends BaseTemplate {
 		$html .= $this->htmlClass::closeElement( 'div' );
 
 		return $html;
+	}
+
+	private function getPersonalUrls(): array {
+		$contentNavigation = $this->data['content_navigation'];
+
+		// MediaWiki 1.43 to 1.45
+		if ( !isset( $contentNavigation['user-menu'] ) ) {
+			return $this->get( 'personal_urls' );
+		}
+
+		// MediaWiki 1.46+
+		return array_merge( ...array_map(
+			static fn ( string $menu ) => $contentNavigation[$menu] ?? [],
+			SkinMedik::PERSONAL_TOOLS_MENUS
+		) );
 	}
 
 	/**

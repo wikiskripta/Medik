@@ -16,6 +16,21 @@ class SkinMedik extends SkinTemplate {
 	/** @var string skin template */
 	public $template = 'MedikTemplate';
 
+	public const PERSONAL_TOOLS_MENUS = [
+		'user-interface-preferences',
+		'user-page',
+		'notifications',
+		'user-menu',
+	];
+
+	public function __construct( array $options ) {
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			$options['menus'] = [ 'associated-pages', 'views', 'actions', 'variants', ...self::PERSONAL_TOOLS_MENUS ];
+		}
+
+		parent::__construct( $options );
+	}
+
 	/**
 	 * Add meta tags
 	 *
