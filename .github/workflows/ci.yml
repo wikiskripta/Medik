@@ -26,10 +26,10 @@ jobs:
             experimental: false
           - mw: 'REL1_46'
             php: 8.4
-            experimental: true
+            experimental: false
           - mw: 'REL1_47'
             php: 8.5
-            experimental: true
+            experimental: false
           - mw: 'master'
             php: 8.5
             experimental: true
