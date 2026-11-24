@@ -27,6 +27,10 @@ blockquote > :last-child {
 	margin-bottom: 0;
 }
 
+dd {
+	margin-inline-start: 1.6em;
+}
+
 a,
 a:hover,
 #user-tools .btn-link {

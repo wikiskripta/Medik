@@ -12,6 +12,7 @@ Under development.
 * Fixed VisualEditor toolbar not staying at the top when scrolling on MW 1.46+
 * Fixed deprecation warnings about skin menus and personal tools on MW 1.46+
 * Styled blockquotes like Vector, with an indent and a left border
+* Fixed missing indentation of colon-indented lines and definition lists
 
 ### Medik 5.1.5
 
