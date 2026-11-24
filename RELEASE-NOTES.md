@@ -13,6 +13,7 @@ Under development.
 * Fixed deprecation warnings about skin menus and personal tools on MW 1.46+
 * Styled blockquotes like Vector, with an indent and a left border
 * Fixed missing indentation of colon-indented lines and definition lists
+* Fixed lists being indented further than in other skins
 
 ### Medik 5.1.5
 
