@@ -18,6 +18,15 @@ table caption {
 	color: inherit;
 }
 
+blockquote {
+	border-left: 4px solid var( --bs-border-color );
+	padding: 0.5rem 1rem;
+}
+
+blockquote > :last-child {
+	margin-bottom: 0;
+}
+
 a,
 a:hover,
 #user-tools .btn-link {
