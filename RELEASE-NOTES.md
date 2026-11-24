@@ -14,6 +14,7 @@ Under development.
 * Styled blockquotes like Vector, with an indent and a left border
 * Fixed missing indentation of colon-indented lines and definition lists
 * Fixed lists being indented further than in other skins
+* Placed the table of contents before the first heading on desktop, like other skins, instead of floating it to the right
 
 ### Medik 5.1.5
 
