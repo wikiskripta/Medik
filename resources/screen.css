@@ -31,6 +31,11 @@ dd {
 	margin-inline-start: 1.6em;
 }
 
+ol,
+ul {
+	padding-left: 0;
+}
+
 a,
 a:hover,
 #user-tools .btn-link {
