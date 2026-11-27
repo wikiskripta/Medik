@@ -2,7 +2,7 @@
 
 ### Medik 6.0.0
 
-Under development.
+Released on November 27, 2026.
 
 * Raised minimum MediaWiki version from 1.39 to 1.43
 * Updated Bootstrap to 5.3.9
